@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellView" rowHeight="74" id="2Fp-BC-7fN" customClass="CellController" customModule="TrainApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="555" height="74"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Fp-BC-7fN" id="e2l-Df-enn">
+                <rect key="frame" x="0.0" y="0.0" width="555" height="74"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uCO-MI-iml">
+                        <rect key="frame" x="0.0" y="0.0" width="555" height="74"/>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="uCO-MI-iml" secondAttribute="trailing" id="7aG-CP-fC5"/>
+                    <constraint firstItem="uCO-MI-iml" firstAttribute="top" secondItem="e2l-Df-enn" secondAttribute="top" id="8cI-aQ-gMm"/>
+                    <constraint firstItem="uCO-MI-iml" firstAttribute="leading" secondItem="e2l-Df-enn" secondAttribute="leading" id="CNO-8T-Hkl"/>
+                    <constraint firstAttribute="bottom" secondItem="uCO-MI-iml" secondAttribute="bottom" id="VdD-2e-G1W"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="stackView" destination="uCO-MI-iml" id="TlQ-gL-Qsz"/>
+            </connections>
+            <point key="canvasLocation" x="-567.39130434782612" y="-54.241071428571423"/>
+        </tableViewCell>
+    </objects>
+</document>

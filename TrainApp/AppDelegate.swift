@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        let launch = LaunchController(nibName: "LaunchView", bundle: nil)
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window!.rootViewController = launch
+//        window!.makeKeyAndVisible()
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+//            let mainView = MainController(nibName: "MainView", bundle: nil)
+//            self.window!.rootViewController = mainView
+//        })
         return true
     }
 
