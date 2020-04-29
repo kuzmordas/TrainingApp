@@ -8,15 +8,14 @@
 
 import UIKit
 import Alamofire
-import Foundation
 
 class Currency {
-    var currency: String
+    var type: String
     var amount: String
     var name: String
     
-    init(currency: String, amount: String, name: String) {
-        self.currency = currency
+    init(type: String, amount: String, name: String) {
+        self.type = type
         self.amount = amount
         self.name = name
     }
@@ -39,7 +38,7 @@ class MainController: UIViewController {
                     let currency = data.object(forKey: "currency")! as! String
                     let amount = data.object(forKey: "amount")! as! String
                     let name = data.object(forKey: "name")! as! String
-                    let currencyItem = Currency(currency: currency, amount: amount, name: name)
+                    let currencyItem = Currency(type: currency, amount: amount, name: name)
                     self.currencyData.append(currencyItem)
                 }
                 self.tableView.reloadData()
@@ -49,7 +48,9 @@ class MainController: UIViewController {
         }
         tableView.dataSource = self;
         tableView.delegate = self;
-        tableView.register(UINib(nibName: "CellView", bundle: nil), forCellReuseIdentifier: "CellView")
+        tableView.register(UINib(nibName: "RurCellView", bundle: nil), forCellReuseIdentifier: "RurCellView")
+        tableView.register(UINib(nibName: "UsdCellView", bundle: nil), forCellReuseIdentifier: "UsdCellView")
+        tableView.register(UINib(nibName: "EurCellView", bundle: nil), forCellReuseIdentifier: "EurCellView")
     }
 
 }
@@ -70,9 +71,22 @@ extension MainController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currency = self.currencyData[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellView", for: indexPath) as! CellController
-        cell.nameLabel?.text = currency.name
-        cell.sumLabel?.text = currency.amount
-        return cell
+        
+        if currency.type == "USD" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "UsdCellView", for: indexPath) as! UsdCellController
+            cell.nameLabelView?.text = currency.name
+            cell.amountLabelView?.text = currency.amount
+            return cell
+        } else if currency.type == "RUR" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "RurCellView", for: indexPath) as! RurCellController
+            cell.nameLabelView?.text = currency.name
+            cell.amountLabelView?.text = currency.amount
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "EurCellView", for: indexPath) as! EurCellController
+            cell.nameLabelView?.text = currency.name
+            cell.amountLabelView?.text = currency.amount
+            return cell
+        }
     }
 }
