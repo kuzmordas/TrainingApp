@@ -12,29 +12,38 @@
             <connections>
                 <outlet property="fieldNameLabel" destination="h8C-rO-Ake" id="14G-fy-oem"/>
                 <outlet property="fieldValueLabel" destination="c2W-Rg-eiD" id="wqB-xu-NMH"/>
-                <outlet property="view" destination="bFC-y2-F8I" id="WpF-vN-9hR"/>
+                <outlet property="view" destination="tIj-VN-dlA" id="2Io-JT-677"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" id="bFC-y2-F8I">
-            <rect key="frame" x="0.0" y="0.0" width="988" height="60"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+        <view contentMode="scaleToFill" id="tIj-VN-dlA">
+            <rect key="frame" x="0.0" y="0.0" width="493" height="70"/>
+            <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8C-rO-Ake">
-                    <rect key="frame" x="0.0" y="0.0" width="988" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8C-rO-Ake">
+                    <rect key="frame" x="0.0" y="0.0" width="493" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2W-Rg-eiD">
-                    <rect key="frame" x="0.0" y="30" width="988" height="30"/>
+                    <rect key="frame" x="0.0" y="30" width="493" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="D4o-te-2LO"/>
-            <point key="canvasLocation" x="444.92753623188412" y="116.85267857142857"/>
-        </stackView>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="3po-cn-V1A" firstAttribute="trailing" secondItem="c2W-Rg-eiD" secondAttribute="trailing" id="SMb-05-8Bd"/>
+                <constraint firstItem="c2W-Rg-eiD" firstAttribute="bottom" secondItem="3po-cn-V1A" secondAttribute="bottom" constant="34" id="pgh-9g-b8M"/>
+                <constraint firstItem="3po-cn-V1A" firstAttribute="top" secondItem="c2W-Rg-eiD" secondAttribute="top" constant="14" id="ydT-ZW-2pm"/>
+                <constraint firstItem="c2W-Rg-eiD" firstAttribute="leading" secondItem="3po-cn-V1A" secondAttribute="leading" id="zWz-mG-DSJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="3po-cn-V1A"/>
+            <point key="canvasLocation" x="450.00000000000006" y="214.95535714285714"/>
+        </view>
     </objects>
 </document>

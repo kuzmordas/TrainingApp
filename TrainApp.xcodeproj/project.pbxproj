@@ -16,7 +16,6 @@
 		0A5E6B88245AEEB900E6B719 /* AccountDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E6B87245AEEB900E6B719 /* AccountDetailsController.swift */; };
 		0A5E6B8A245B044900E6B719 /* AccountDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5E6B89245B044900E6B719 /* AccountDetailsView.xib */; };
 		0A5E6B8D245B091F00E6B719 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E6B8C245B091F00E6B719 /* CurrencyModel.swift */; };
-		0A5E6B8F245B0DA200E6B719 /* FieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5E6B8E245B0DA200E6B719 /* FieldView.xib */; };
 		0A5E6B93245BF78400E6B719 /* AccountFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E6B92245BF78400E6B719 /* AccountFieldController.swift */; };
 		0A5E6B95245BF7FA00E6B719 /* AccountFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5E6B94245BF7FA00E6B719 /* AccountFieldView.xib */; };
 		0A5E6B98245C113800E6B719 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E6B97245C113800E6B719 /* Api.swift */; };
@@ -62,7 +61,6 @@
 		0A5E6B87245AEEB900E6B719 /* AccountDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsController.swift; sourceTree = "<group>"; };
 		0A5E6B89245B044900E6B719 /* AccountDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountDetailsView.xib; sourceTree = "<group>"; };
 		0A5E6B8C245B091F00E6B719 /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
-		0A5E6B8E245B0DA200E6B719 /* FieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FieldView.xib; sourceTree = "<group>"; };
 		0A5E6B92245BF78400E6B719 /* AccountFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFieldController.swift; sourceTree = "<group>"; };
 		0A5E6B94245BF7FA00E6B719 /* AccountFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountFieldView.xib; sourceTree = "<group>"; };
 		0A5E6B97245C113800E6B719 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 				0A5E6B7D2459E45C00E6B719 /* UsdCellView.xib */,
 				0A5E6B732459638300E6B719 /* RurCellView.xib */,
 				0A5E6B81245A01DE00E6B719 /* EurCellView.xib */,
-				0A5E6B8E245B0DA200E6B719 /* FieldView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -354,7 +351,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A5E6B8F245B0DA200E6B719 /* FieldView.xib in Resources */,
 				0A5E6B742459638300E6B719 /* RurCellView.xib in Resources */,
 				0A5E6B7E2459E45C00E6B719 /* UsdCellView.xib in Resources */,
 				0A73E969245814080047B617 /* LaunchView.xib in Resources */,

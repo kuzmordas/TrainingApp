@@ -43,11 +43,7 @@ class AccountDetailsController: UIViewController {
                 self.currencyData!.name = name
                 self.nameField!.update(newValue: name)
                 self.textFieldView.text = ""
-                print(self.parent)
             })
         }
-        
-        
     }
-    
 }

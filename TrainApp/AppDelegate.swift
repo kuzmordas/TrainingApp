@@ -16,24 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-//        let launch = LaunchController(nibName: "LaunchView", bundle: nil)
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window!.rootViewController = launch
-//        window!.makeKeyAndVisible()
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
-//            let mainView = MainController(nibName: "MainView", bundle: nil)
-//            self.window!.rootViewController = mainView
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        let rootViewController = LaunchController(nibName: "LaunchView", bundle : nil)
+//        self.window!.rootViewController = rootViewController
+//        let mainView = MainController(nibName: "MainView", bundle: nil)
+//        let navigationController = UINavigationController(rootViewController: mainView)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+//            self.window!.rootViewController = navigationController
 //        })
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        let rootViewController = LaunchController(nibName: "LaunchView", bundle : nil)
-        self.window!.rootViewController = rootViewController
-        let mainView = MainController(nibName: "MainView", bundle: nil)
-        let navigationController = UINavigationController(rootViewController: mainView)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.window!.rootViewController = navigationController
-        })
-        self.window!.makeKeyAndVisible()
+//        self.window!.makeKeyAndVisible()
         return true
     }
 

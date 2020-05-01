@@ -19,6 +19,7 @@ class AccountFieldController: UIViewController {
         super.viewDidLoad()
         fieldNameLabel.text = fieldName
         fieldValueLabel.text = fieldValue
+        self.view.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
     
     func setField(key: String, value: String?) {
