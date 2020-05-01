@@ -16,20 +16,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="555" height="74"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uCO-MI-iml">
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uCO-MI-iml">
                         <rect key="frame" x="0.0" y="0.0" width="555" height="74"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rub" translatesAutoresizingMaskIntoConstraints="NO" id="w9l-G7-v8Z">
-                                <rect key="frame" x="0.0" y="0.0" width="178.5" height="74"/>
+                                <rect key="frame" x="0.0" y="12" width="178.5" height="50"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzl-1i-3ei">
-                                <rect key="frame" x="188.5" y="0.0" width="178" height="74"/>
+                                <rect key="frame" x="188.5" y="25" width="178" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GZ-sk-daZ">
-                                <rect key="frame" x="376.5" y="0.0" width="178.5" height="74"/>
+                                <rect key="frame" x="376.5" y="25" width="178.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
