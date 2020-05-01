@@ -9,18 +9,6 @@
 import UIKit
 import Alamofire
 
-class Currency {
-    var type: String
-    var amount: String
-    var name: String
-    
-    init(type: String, amount: String, name: String) {
-        self.type = type
-        self.amount = amount
-        self.name = name
-    }
-}
-
 class MainController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -28,36 +16,35 @@ class MainController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        AF.request("http://109.229.239.222:10001/accounts").responseJSON { response in
-            switch response.result {
-            case let .success(value):
-                let JSON = value as! NSDictionary
-                let items = JSON.object(forKey: "items")! as! NSArray
-                items.forEach { item in
-                    let data = item as! NSDictionary
-                    let currency = data.object(forKey: "currency")! as! String
-                    let amount = data.object(forKey: "amount")! as! String
-                    let name = data.object(forKey: "name")! as! String
-                    let currencyItem = Currency(type: currency, amount: amount, name: name)
-                    self.currencyData.append(currencyItem)
-                }
-                self.tableView.reloadData()
-            case let .failure(error):
-                print(error)
-            }
-        }
+        Api.getCurrencies(success: { (respons) -> Void in
+            self.currencyData = respons
+            self.tableView.reloadData()
+        })
         tableView.dataSource = self;
         tableView.delegate = self;
         tableView.register(UINib(nibName: "RurCellView", bundle: nil), forCellReuseIdentifier: "RurCellView")
         tableView.register(UINib(nibName: "UsdCellView", bundle: nil), forCellReuseIdentifier: "UsdCellView")
         tableView.register(UINib(nibName: "EurCellView", bundle: nil), forCellReuseIdentifier: "EurCellView")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
 
 }
 
 
 extension MainController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currency = currencyData[indexPath.row]
+        Api.getCurrencyDescription(id: currency.id, success: { (description) -> Void in
+            let destination = AccountDetailsController(nibName: "AccountDetailsView", bundle: nil)
+            currency.description = description
+            destination.currencyData = currency
+            self.navigationController?.pushViewController(destination, animated: true)
+        })
+        
+    }
 }
 
 extension MainController: UITableViewDataSource {

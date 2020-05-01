@@ -13,6 +13,13 @@
 		0A5E6B802459E4DC00E6B719 /* UsdCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E6B7F2459E4DC00E6B719 /* UsdCellController.swift */; };
 		0A5E6B82245A01DE00E6B719 /* EurCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5E6B81245A01DE00E6B719 /* EurCellView.xib */; };
 		0A5E6B84245A027700E6B719 /* EurCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E6B83245A027700E6B719 /* EurCellController.swift */; };
+		0A5E6B88245AEEB900E6B719 /* AccountDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E6B87245AEEB900E6B719 /* AccountDetailsController.swift */; };
+		0A5E6B8A245B044900E6B719 /* AccountDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5E6B89245B044900E6B719 /* AccountDetailsView.xib */; };
+		0A5E6B8D245B091F00E6B719 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E6B8C245B091F00E6B719 /* CurrencyModel.swift */; };
+		0A5E6B8F245B0DA200E6B719 /* FieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5E6B8E245B0DA200E6B719 /* FieldView.xib */; };
+		0A5E6B93245BF78400E6B719 /* AccountFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E6B92245BF78400E6B719 /* AccountFieldController.swift */; };
+		0A5E6B95245BF7FA00E6B719 /* AccountFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5E6B94245BF7FA00E6B719 /* AccountFieldView.xib */; };
+		0A5E6B98245C113800E6B719 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E6B97245C113800E6B719 /* Api.swift */; };
 		0A73E969245814080047B617 /* LaunchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB6DD67245761CC008EB1EC /* LaunchView.xib */; };
 		0A73EA27245890710047B617 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A73EA26245890710047B617 /* LaunchScreen.storyboard */; };
 		0AB6DD3024575AFB008EB1EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6DD2F24575AFB008EB1EC /* AppDelegate.swift */; };
@@ -52,6 +59,13 @@
 		0A5E6B7F2459E4DC00E6B719 /* UsdCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsdCellController.swift; sourceTree = "<group>"; };
 		0A5E6B81245A01DE00E6B719 /* EurCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EurCellView.xib; sourceTree = "<group>"; };
 		0A5E6B83245A027700E6B719 /* EurCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurCellController.swift; sourceTree = "<group>"; };
+		0A5E6B87245AEEB900E6B719 /* AccountDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsController.swift; sourceTree = "<group>"; };
+		0A5E6B89245B044900E6B719 /* AccountDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountDetailsView.xib; sourceTree = "<group>"; };
+		0A5E6B8C245B091F00E6B719 /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
+		0A5E6B8E245B0DA200E6B719 /* FieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FieldView.xib; sourceTree = "<group>"; };
+		0A5E6B92245BF78400E6B719 /* AccountFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFieldController.swift; sourceTree = "<group>"; };
+		0A5E6B94245BF7FA00E6B719 /* AccountFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountFieldView.xib; sourceTree = "<group>"; };
+		0A5E6B97245C113800E6B719 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		0A73EA26245890710047B617 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AB6DD2C24575AFB008EB1EC /* TrainApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB6DD2F24575AFB008EB1EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,9 +126,12 @@
 			children = (
 				0AB6DD67245761CC008EB1EC /* LaunchView.xib */,
 				0AB6DD6D24576496008EB1EC /* MainView.xib */,
+				0A5E6B89245B044900E6B719 /* AccountDetailsView.xib */,
+				0A5E6B94245BF7FA00E6B719 /* AccountFieldView.xib */,
 				0A5E6B7D2459E45C00E6B719 /* UsdCellView.xib */,
 				0A5E6B732459638300E6B719 /* RurCellView.xib */,
 				0A5E6B81245A01DE00E6B719 /* EurCellView.xib */,
+				0A5E6B8E245B0DA200E6B719 /* FieldView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,8 +144,26 @@
 				0A5E6B75245966FC00E6B719 /* RurCellController.swift */,
 				0A5E6B7F2459E4DC00E6B719 /* UsdCellController.swift */,
 				0A5E6B83245A027700E6B719 /* EurCellController.swift */,
+				0A5E6B87245AEEB900E6B719 /* AccountDetailsController.swift */,
+				0A5E6B92245BF78400E6B719 /* AccountFieldController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0A5E6B8B245B08F600E6B719 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A5E6B8C245B091F00E6B719 /* CurrencyModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0A5E6B96245C111F00E6B719 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				0A5E6B97245C113800E6B719 /* Api.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 		0AB6DD2324575AFB008EB1EC = {
@@ -158,6 +193,8 @@
 			children = (
 				0A5E6B7B2459E04400E6B719 /* Views */,
 				0A5E6B7C2459E0AC00E6B719 /* Controllers */,
+				0A5E6B8B245B08F600E6B719 /* Models */,
+				0A5E6B96245C111F00E6B719 /* Api */,
 				0AB6DD2F24575AFB008EB1EC /* AppDelegate.swift */,
 				0A73EA26245890710047B617 /* LaunchScreen.storyboard */,
 				0AB6DD3124575AFB008EB1EC /* SceneDelegate.swift */,
@@ -317,11 +354,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5E6B8F245B0DA200E6B719 /* FieldView.xib in Resources */,
 				0A5E6B742459638300E6B719 /* RurCellView.xib in Resources */,
 				0A5E6B7E2459E45C00E6B719 /* UsdCellView.xib in Resources */,
 				0A73E969245814080047B617 /* LaunchView.xib in Resources */,
 				0A73EA27245890710047B617 /* LaunchScreen.storyboard in Resources */,
+				0A5E6B95245BF7FA00E6B719 /* AccountFieldView.xib in Resources */,
 				0A5E6B82245A01DE00E6B719 /* EurCellView.xib in Resources */,
+				0A5E6B8A245B044900E6B719 /* AccountDetailsView.xib in Resources */,
 				0AB6DD6E24576496008EB1EC /* MainView.xib in Resources */,
 				0AB6DD3924575AFB008EB1EC /* Assets.xcassets in Resources */,
 			);
@@ -451,10 +491,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5E6B93245BF78400E6B719 /* AccountFieldController.swift in Sources */,
+				0A5E6B88245AEEB900E6B719 /* AccountDetailsController.swift in Sources */,
 				0AB6DD6C2457646E008EB1EC /* MainController.swift in Sources */,
 				0AB6DD6A245762D4008EB1EC /* LaunchController.swift in Sources */,
 				0A5E6B802459E4DC00E6B719 /* UsdCellController.swift in Sources */,
+				0A5E6B98245C113800E6B719 /* Api.swift in Sources */,
 				0A5E6B84245A027700E6B719 /* EurCellController.swift in Sources */,
+				0A5E6B8D245B091F00E6B719 /* CurrencyModel.swift in Sources */,
 				0AB6DD3024575AFB008EB1EC /* AppDelegate.swift in Sources */,
 				0AB6DD3224575AFB008EB1EC /* SceneDelegate.swift in Sources */,
 				0A5E6B76245966FC00E6B719 /* RurCellController.swift in Sources */,

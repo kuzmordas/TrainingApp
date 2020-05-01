@@ -22,11 +22,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
         let rootViewController = LaunchController(nibName: "LaunchView", bundle : nil)
         self.window!.rootViewController = rootViewController
-        self.window!.makeKeyAndVisible()
+        let mainView = MainController(nibName: "MainView", bundle: nil)
+        let navigationController = UINavigationController(rootViewController: mainView)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            let mainView = MainController(nibName: "MainView", bundle: nil)
-            self.window!.rootViewController = mainView
+            self.window!.rootViewController = navigationController
         })
+        self.window!.makeKeyAndVisible()
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
