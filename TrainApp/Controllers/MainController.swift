@@ -16,9 +16,9 @@ class MainController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Api.getCurrencies(success: { (respons) -> Void in
-            self.currencyData = respons
-            self.tableView.reloadData()
+        Api.getCurrencies(success: { [weak self] (respons) -> Void in
+            self?.currencyData = respons
+            self?.tableView.reloadData()
         })
         tableView.dataSource = self;
         tableView.delegate = self;
@@ -37,11 +37,11 @@ class MainController: UIViewController {
 extension MainController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currency = currencyData[indexPath.row]
-        Api.getCurrencyDescription(id: currency.id, success: { (description) -> Void in
+        Api.getCurrencyDescription(id: currency.id, success: { [weak self] (details) -> Void in
             let destination = AccountDetailsController(nibName: "AccountDetailsView", bundle: nil)
-            currency.description = description
+            currency.details = details
             destination.currencyData = currency
-            self.navigationController?.pushViewController(destination, animated: true)
+            self?.navigationController?.pushViewController(destination, animated: true)
         })
         
     }

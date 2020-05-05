@@ -8,17 +8,23 @@
 
 import Foundation
 
-class Currency {
+class Currency : Codable {
     var id: String
     var type: String
     var amount: String
+    var number: String
     var name: String
-    var description: String?
+    var details: CurrencyDetails?
     
-    init(id: String, type: String, amount: String, name: String) {
-        self.id = id
-        self.type = type
-        self.amount = amount
-        self.name = name
+    enum CodingKeys: String, CodingKey {
+      case id, amount, number, name, type = "currency"
     }
+}
+
+class CurrencyDetails : Codable {
+    var description: String
+}
+
+class CurrencyResponse : Codable {
+    var items: [Currency]
 }

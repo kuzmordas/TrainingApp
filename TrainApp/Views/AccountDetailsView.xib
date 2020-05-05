@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountDetailsController" customModule="TrainApp" customModuleProvider="target">
             <connections>
-                <outlet property="stackView" destination="jjW-Tk-IGu" id="3Rc-Lh-v0t"/>
+                <outlet property="stackView" destination="kM6-B3-Sac" id="Xel-GE-tXI"/>
                 <outlet property="textFieldView" destination="Quo-37-nzb" id="K3t-PA-1Ed"/>
                 <outlet property="view" destination="iN0-l3-epB" id="pid-hT-wbq"/>
             </connections>
@@ -20,17 +20,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jjW-Tk-IGu">
-                    <rect key="frame" x="20" y="44" width="374" height="36"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoS-DE-b2H">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ws-L3-Cvc">
                     <rect key="frame" x="20" y="814" width="374" height="48"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -50,16 +39,39 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUv-p0-unW">
+                    <rect key="frame" x="20" y="44" width="374" height="682"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kM6-B3-Sac">
+                            <rect key="frame" x="0.0" y="0.0" width="263.5" height="48"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REw-Gd-R1L">
+                                    <rect key="frame" x="0.0" y="0.0" width="263.5" height="48"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="kM6-B3-Sac" firstAttribute="top" secondItem="fUv-p0-unW" secondAttribute="top" id="IaD-LU-TDZ"/>
+                        <constraint firstAttribute="bottom" secondItem="kM6-B3-Sac" secondAttribute="bottom" id="Pg5-E9-ybY"/>
+                        <constraint firstItem="kM6-B3-Sac" firstAttribute="leading" secondItem="fUv-p0-unW" secondAttribute="leading" id="iTS-WY-gXD"/>
+                        <constraint firstAttribute="trailing" secondItem="kM6-B3-Sac" secondAttribute="trailing" id="x3w-5r-MJT"/>
+                    </constraints>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Quo-37-nzb" secondAttribute="trailing" constant="20" id="AWv-i3-1Gm"/>
-                <constraint firstItem="jjW-Tk-IGu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="EJi-m7-Yua"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Quo-37-nzb" secondAttribute="bottom" constant="50" id="EPf-bf-VNg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0ws-L3-Cvc" secondAttribute="bottom" id="FEK-yF-hHh"/>
-                <constraint firstItem="jjW-Tk-IGu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Hto-si-iOd"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jjW-Tk-IGu" secondAttribute="trailing" constant="20" id="Vi9-5n-NMT"/>
+                <constraint firstItem="fUv-p0-unW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="J1c-MI-lgB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fUv-p0-unW" secondAttribute="trailing" constant="20" id="R1P-1z-O9e"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fUv-p0-unW" secondAttribute="bottom" constant="136" id="W7b-pq-gac"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0ws-L3-Cvc" secondAttribute="trailing" constant="20" id="WdI-rb-5G3"/>
+                <constraint firstItem="fUv-p0-unW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Yl7-63-TdD"/>
                 <constraint firstItem="wzh-Os-n4W" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bbd-iH-yRB"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wzh-Os-n4W" secondAttribute="trailing" constant="209.5" id="fRt-wr-E30"/>
                 <constraint firstItem="0ws-L3-Cvc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gIk-cJ-d8s"/>
